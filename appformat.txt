@@ -32,4 +32,14 @@ projectStore:
 		-- will contain the various structures for the project. Like project
 		model, project entry model, response model etc. 
 
+In order to save the data how I want to: Project{
+		Id,
+		name,
+		Message []*Message
+	}
+
+I might be able to just grab the ID each time, and then add the message to the
+end of the data. The same could be done with grabbing a certain project, adding
+a new message, deleting a message etc. I think this is the way i should try it
+at least
 

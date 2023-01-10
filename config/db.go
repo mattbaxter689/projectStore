@@ -1,6 +1,7 @@
 package config
 
 import (
+	"github.com/mattbaxter689/projectStore/pkg/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -13,6 +14,8 @@ func Connect() *gorm.DB {
 	if err != nil {
 		panic("error connecting to the database")
 	}
+	
+	db.AutoMigrate(&models.Project{})
 
 	return db
 }
