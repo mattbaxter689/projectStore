@@ -1,0 +1,35 @@
+This is going to lay out the structure for the application:
+
+What is the goal of this project?:
+Overall the goal is to develop a program that will allow users to run said
+program, add a project, and a message for what they did for the project on that
+day. Eventually, as more projects are introduced, we will allow them to keep a
+record of them, and select from their existing projects to add to. 
+
+In the future, we can add things like exporting the work done for each entry
+into a csv or a pdf file so that they can show the record of what they have
+done. With this, we could give some metrics on the work done (like longest
+submission streak etc)
+
+APP STRUCTURE:
+
+projectStore:
+	-- config
+		-- contains the file that will connect and start the database and pass
+		it to the main function
+			- function has been created to create the database. Now need the
+			  models that I want to use for this. 
+
+
+
+	-- pkg
+		-- will contain the rest of the functions needed to grab the projects,
+		get specific entries by project, add new entry to project etc
+
+
+
+	-- models
+		-- will contain the various structures for the project. Like project
+		model, project entry model, response model etc. 
+
+
