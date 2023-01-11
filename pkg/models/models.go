@@ -7,12 +7,11 @@ import (
 type Project struct {
 	gorm.Model
 	Name string
-	Messages []Message
+	Messages []Message `gorm:"foreignKey:ProjectID"`
 }
 
 type Message struct {
 	gorm.Model
 	Comment string
 	ProjectID uint 
-
 }

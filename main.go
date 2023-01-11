@@ -16,6 +16,20 @@ func main() {
 
 	projects := pr.HasProject()
 	if !projects {
-		fmt.Println("You do not currently have any projects")
+		err := pr.CreateNewProject()	
+		if err != nil {
+			panic("Error entering value into database")
+		}
 	}
+
+	if err := pr.AddEntryByProject(); err != nil {
+		panic("Problem adding entry to the database")
+	}
+
+	proj, err := pr.GetAllProjects()
+	if err != nil {
+		panic("Error retrieiving data")
+	}
+	fmt.Println(proj)
+
 }
