@@ -10,13 +10,13 @@ import (
 
 func main() {
 	// by default a help flag is given to us so that is not needed
-	db := config.Connect()	
-	// fmt.Println("db connected: %s", db) 
+	db := config.Connect()
+
 	pr := controllers.GormRepository{DB: db}
 
 	projects := pr.HasProject()
 	if !projects {
-		err := pr.CreateNewProject()	
+		err := pr.CreateNewProject()
 		if err != nil {
 			panic("Error entering value into database")
 		}
