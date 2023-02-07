@@ -31,5 +31,4 @@ func main() {
 		panic("Error retrieiving data")
 	}
 	fmt.Println(proj)
-
 }
